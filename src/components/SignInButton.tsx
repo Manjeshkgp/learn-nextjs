@@ -3,6 +3,7 @@
  import { FC, useState } from 'react'
  import Button from './ui/Button'
 import { signIn } from 'next-auth/react'
+import { toast } from './ui/Toast'
  
  interface SignInButtonProps {}
  
@@ -13,11 +14,11 @@ import { signIn } from 'next-auth/react'
     try {
         await signIn("google")
     } catch (error) {
-        // toast({
-        //     title:"Erro signing in",
-        //     message:"Please try again later",
-        //     type:"error",
-        // })
+        toast({
+            title:"Erro signing in",
+            message:"Please try again later",
+            type:"error",
+        })
     }
    }
     return <Button onClick={SignInWithGoogle} isLoading={isLoading}>Sign In</Button>

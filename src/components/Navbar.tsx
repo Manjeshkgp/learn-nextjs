@@ -10,12 +10,12 @@ const Navbar = async () => {
   const session = await getServerSession();
   return (
     <div className="bg-slate-100 dark:bg-slate-900 w-full fixed bg-blur-sm z-50 top-0 left-0 h-20 border-b border-slate-300 dark:border-slate-700 shadow-sm flex items-center justify-between">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className={buttonVariants({ variant: "link" })}>
           Text Similarity 1.0
         </Link>
         <div className="md:hidden"><ThemeToggle/></div>
-        <div className="hidden md:flex">
+        <div className="hidden md:flex justify-around gap-2">
           <ThemeToggle/>
           <Link
             href="/documentation"
