@@ -4,8 +4,14 @@ import { cn } from '../lib/utils'
 import Providers from '@/components/Providers'
 import Navbar from '@/components/Navbar'
 import { Toaster } from '@/components/ui/Toast'
+import type { Metadata } from 'next'
 
 const inter = Inter({subsets:["latin"]})
+
+export const metadata:Metadata = {
+  title: 'Similarity API | Home',
+  description: "Best free open-source text similarity api"
+}
 
 export default function RootLayout({
   children,
