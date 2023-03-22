@@ -13,8 +13,8 @@ export const metadata:Metadata ={
 
 const page: FC = ({}) => {
   return (<>
-  <div className="container max-w-7xl mx-auto mt-12">
-    <div className="flex flex-col gap-6">
+  <div className="container max-w-7xl mx-auto pb-10 mt-12">
+    <div className="flex flex-col items-center gap-6">
     <LargeHeading>Making a Request</LargeHeading>
     <Paragraph>api/v1/similarity</Paragraph>
     <DocumentaionTab/>
