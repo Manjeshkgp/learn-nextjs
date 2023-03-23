@@ -6,6 +6,7 @@ import {formatDistance} from "date-fns"
 import LargeHeading from "./ui/LargeHeading";
 import Paragraph from "./ui/Paragraph";
 import { Input } from "./ui/Input";
+import Table from "./Table";
 
 const ApiDashboard = async () => {
   const user = await getServerSession(authOptions);
@@ -36,11 +37,11 @@ const ApiDashboard = async () => {
         Your API Key:
       </Paragraph>
       <Input className="w-fit truncate" readOnly value={activeApiKey.key}></Input>
+    </div>
       <Paragraph className="text-center md:text-left mt-4 -mb-4">
         Your API History:
       </Paragraph>
-      {/* <Table/> */}
-    </div>
+      <Table userRequests={serializableRequest}/>
   </div>
   </>)
 };
